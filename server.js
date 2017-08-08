@@ -12,11 +12,11 @@ var articleone =
     date:'8 Aug 2017',
     content:`
      <p>
-                This is my first web app. I am working on it...It gives a very good experience. Making our oun web apps is really amazing and gives a lot of pleasure.This is my first web app. I am working on it...It gives a very good experience. Making our oun web apps is really amazing and gives a lot of pleasure.
-            </p>
-             <p>
-                This is my first web app. I am working on it...It gives a very good experience. Making our oun web apps is really amazing and gives a lot of pleasure.This is my first web app. I am working on it...It gives a very good experience. Making our oun web apps is really amazing and gives a lot of pleasure.
-            </p>
+        This is my first web app. I am working on it...It gives a very good experience. Making our oun web apps is really amazing and gives a lot of pleasure.This is my first web app. I am working on it...It gives a very good experience. Making our oun web apps is really amazing and gives a lot of pleasure.
+    </p>
+     <p>
+        This is my first web app. I am working on it...It gives a very good experience. Making our oun web apps is really amazing and gives a lot of pleasure.This is my first web app. I am working on it...It gives a very good experience. Making our oun web apps is really amazing and gives a lot of pleasure.
+    </p>
     `
 };
 
@@ -61,7 +61,7 @@ function createTemplate(data){
         
     </html>`;
     return htmlTemplate;
-};
+}
 
 app.get('/article-one', function (req, res) {
   res.send(createTemplate(articleone));
