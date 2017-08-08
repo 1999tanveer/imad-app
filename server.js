@@ -26,7 +26,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-function createtemplate(data){
+function createTemplate(data){
     title=data.title;
     heading=data.heading;
     date.data.date;
@@ -64,7 +64,7 @@ function createtemplate(data){
 }
 
 app.get('/article-one', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+  res.send(createTemplate(articleone));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
