@@ -21,16 +21,11 @@ var articleone =
 };
 
 
-
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
 function createTemplate(data){
-    title=data.title;
-    heading=data.heading;
-    date.data.date;
-    content=data.content;
+    var title=data.title;
+    var heading=data.heading;
+    var date=data.date;
+    var content=data.content;
     var htmltemplate=`
      <html>
         <head>
@@ -62,6 +57,10 @@ function createTemplate(data){
     </html>`;
     return htmlTemplate;
 }
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
 
 app.get('/article-one', function (req, res) {
   res.send(createTemplate(articleone));
