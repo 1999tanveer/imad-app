@@ -17,9 +17,8 @@ var articles=
         </p>
          <p>
             This is my first web app. I am working on it...It gives a very good experience. Making our oun web apps is really amazing and gives a lot of pleasure.This is my first web app. I am working on it...It gives a very good experience. Making our oun web apps is really amazing and gives a lot of pleasure.
-        </p>
-    `
-},
+        </p>`
+        },
     'articl-two' :{
         title:'Article Two|Tanveer Ahmad',
         heading:'Article Two',
@@ -82,8 +81,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName', function (req, res) {
-  res.send(createTemplate(articles[articleName]));
+app.get('/article-one', function (req, res) {
+  res.send(createTemplate(articles[article-one]));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
