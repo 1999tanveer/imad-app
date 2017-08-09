@@ -5,9 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles=
-{
-    'article-one' :{
+var articleone = {
         title:'Article One|Tanveer Ahmad',
         heading:'Article One',
         date:'8 Aug 2017',
@@ -18,27 +16,7 @@ var articles=
          <p>
             This is my first web app. I am working on it...It gives a very good experience. Making our oun web apps is really amazing and gives a lot of pleasure.This is my first web app. I am working on it...It gives a very good experience. Making our oun web apps is really amazing and gives a lot of pleasure.
         </p>`
-        },
-    'articl-two' :{
-        title:'Article Two|Tanveer Ahmad',
-        heading:'Article Two',
-        date:'9 Aug 2017',
-        content:`
-         <p>
-            This is my second article.This is at the stage of development...
-        </p>`
-        },
-    'article-three' :{
-        title:'Article Three|Tanveer Ahmad',
-        heading:'Article Three',
-        date:'10 Aug 2017',
-        content:`
-         <p>
-            This is my third article.Stay tunned wih the article for latest updates.
-        </p>`
-        }
-    
-};
+        };
 
 function createTemplate(data){
     var title=data.title;
@@ -50,7 +28,7 @@ function createTemplate(data){
         <head>
             <title>
                    ${title}
-            </title>
+        </title>
             <meta name="viewport" content="width-device-width, initial-scale=1"/>
             <link href="/ui/style.css" rel="stylesheet" />
         </head>
@@ -82,7 +60,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articles[article-one]));
+  res.send(createTemplate(article-one));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
