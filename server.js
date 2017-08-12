@@ -48,7 +48,7 @@ function createTemplate(data){
      <html>
         <head>
             <title>
-                   ${data.title}
+                   ${title}
         </title>
             <meta name="viewport" content="width-device-width, initial-scale=1"/>
             <link href="/ui/style.css" rel="stylesheet" />
@@ -62,13 +62,13 @@ function createTemplate(data){
             <hr/>
             
             <h3>
-                ${data.heading}
+                ${heading}
             </h3>
             <div>
-                ${data.date}
+                ${date}
             </div>
             <div>
-                ${data.content}
+                ${content}
             </div>
         </body>
         
